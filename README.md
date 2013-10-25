@@ -17,7 +17,9 @@ Features added:
 * All functions work without Javascript
 * Images completely removed for usage in low bandwidth environments
 * Private messages are obfuscated (this does not mean: encrypted) on server
-* Support for captchas using textCAPTCHA (http://textcaptcha.com/)
+* Support for captchas using [textCAPTCHA](http://textcaptcha.com/) 
+  (requires opening an external URL via PHP, i.e. the hoster has to allow
+  this - bad, but not so bad, as most hosters do) 
 * Support for enabling or disabling search engine indication of content
 * Enforcing proxy usage, i.e. user anonymity, possible
 * No BBCode, all messaging is text. Could be a security improvement.
