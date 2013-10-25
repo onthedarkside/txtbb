@@ -136,10 +136,10 @@ echo "<tr><td width=\"24%\" align=\"right\">$VHeaderColor:</td>
 	<td width=\"15%\"><table width=\"100%\" border=\"1\"><tr><td width=\"100%\" bgcolor=\"$headercolor\">&nbsp;</td></tr></table></td>
 	<td width=\"47%\">&nbsp;</td></tr>";
 
-echo "<tr><td width=\"24%\" align=\"right\">$VHeaderGif:</td>
+/*echo "<tr><td width=\"24%\" align=\"right\">$VHeaderGif:</td>
 	<td width=\"15%\"><input type=\"text\" name=\"headergif\"  value=\"$headergif\" size=\"40\"></td>
 	<td width=\"15%\"><table width=\"100%\" border=\"1\"><tr><td  width=\"100%\" height=\"25\"  background=\"$headergif\">&nbsp;</td></tr></table></td>
-	</tr>";
+	</tr>";*/
 
 echo "<tr><td width=\"24%\" align=\"right\">$VHeaderFont:</td>
 	<td width=\"24%\"><input type=\"text\" name=\"headerfont\" value=\"$headerfont\" size=\"10\"></td>
@@ -154,10 +154,6 @@ echo "<tr><td width=\"24%\" align=\"right\">$VSubheaderColor:</td>
 	<td width=\"15%\"><table width=\"100%\" border=\"1\"><tr><td width=\"100%\" bgcolor=\"$subheadercolor\">&nbsp;</td></tr></table></td>
 	<td width=\"47%\">&nbsp;</td></tr>";
 
-echo "<tr><td width=\"24%\" align=\"right\">$VSubheaderGif:</td>
-	<td width=\"15%\"><input type=\"text\" name=\"subheadergif\" value=\"$subheadergif\" size=\"40\"></td>
-	<td width=\"15%\"><table width=\"100%\" border=\"1\"><tr>
-	<td width=\"100%\" height=\"25\" background=\"$subheadergif\">&nbsp;</td></tr></table></td></tr>";
 
 echo "<tr><td width=\"24%\" align=\"right\">$VSubheaderFont:</td>
 	<td width=\"24%\"><input type=\"text\" name=\"subheaderfont\" value=\"$subheaderfont\" size=\"10\"></td>
