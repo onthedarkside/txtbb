@@ -1,0 +1,648 @@
+PBLang - Documentation
+
+Date: 25th September 2003 - version 4.6
+
+-------------------------------------
+Before installing this board: Please read the file copyright.txt very carefully!
+It is important that you understand that I take no responsible for anything that is
+caused, directly or indirectly, by the use of this program. In other words:
+
+You use this program at your own risk!!!
+
+Beyond this, I feel it is very important that you do not remove or alter the
+single line copyright notice which in a way honours my work. I think that's the
+least I can request from you. It is just not right if you put your name behind
+the copyright sign, giving the impression that you did the work that I did for you.
+It is of course ok and no problem if you add a link to your site, or your name
+or whatever to the footer.
+Commercial sites I request to donate via the Paypal button at least 20 US$
+towards the development of this board. Private persons may feel free to donate,
+as it seems appropriate. All users are treated equally with regard to support,
+which is performed through the support board at the location indicated at the
+end of this file. In certain situations and if time permits, I am even willing
+to help via chat, or by other appropriate means.
+
+***********************************************************************************
+***   For updaters: please read the relevant sections below very carefully!!!   ***
+***********************************************************************************
+
+PBLang bases on the PHP source of Powerboard, the development of which has
+been stopped in the middle of 2002 in favour of a commercial package.
+Since then, the board has been largely modified and extended. There
+is not much left over except for the idea to use a flat file system
+(there is absolutely no database like mySQL involved).
+It is a forum which allows localization by the use of language files.
+
+This documentation is intended for admins who need to install and edit the
+board to suit their purposes. I discourage strongly to edit the source,
+unless you know  exactly what you are doing!
+This is mainly because it will be very difficult to benefit of any future
+updates. If you have a good idea, let me know, I'll incorporate it, or I'll
+advise you how you can implement it. I would request that you send the
+results of your own modifications to me, so that I can include them in the
+full package.
+
+
+Contents:
+
+I - Installation or update procedures
+	a - Preparation
+	b - update from any previous version
+	c - update from PBLang
+	d - System requirements
+	e - Changes in File Structure
+	f - other specialities
+	g - language installation
+II - How to use PBLang
+	a - After installation
+	b - Maintenance Mode
+	c - Deletion of messages
+	d - Guest account
+	e - styles and colours
+	f - Deletion of forums and categories
+III - The Admin Control Center
+	A - News and Version Comparison
+	B - Forum Settings
+		a - Announcement option
+		b - server supports email by PHP
+		c - automatic emails
+		d - allowing attachments
+	C - Members
+		e - Grant a status
+IV - Tools
+	a - GetLatestMessage.php
+
+V - Support addresses
+VI - The PBLang-Team
+
+===========================================
+I - Installation or update procedures
+===========================================
+(this is probably the most important section for EVERYONE!)
+
+I.a - Preparation
+------------------
+
+If you are new to PBLang, take a look at the readme-first file! It *is*
+important. For PBLang to run, you have to make files and directories
+writeable. For installation, all directories must be writeable to all (chmod
+666; you can also set them to chmod 777).
+Run install.php. It will check if there are any files or folders which are
+missing or not supplied with the appropriate rights. You need to re-run the
+install program after fixing the reported problems, because certain parts of
+the installation couldn't take place.
+
+The following directories must be writeable (chmod 777):
+
+/db and all subdirectories
+/attachments if you want to allow attachments (you may need to create this
+	folder)
+/templates/pb/images/ranks
+
+-----------------------------------------------------------------
+I.b - For those who update from any previous version (PBLang, NewPB or
+	powerboards):
+-----------------------------------------------------------------
+
+1. Run install.php, it will check if everything has been set properly and
+	inform you of any problems.
+
+2. Go to the admin control center, set your options and submit them. Even if
+you do not want to do any changes, save them. This will add new settings
+variables which are required for a proper functioning of the board. In some
+sections there will be new options which you should set the first time.
+
+Your previous data should be safe. If your previous version is less than 3.0,
+you must now follow instructions for updating from PBLang (3.0).
+
+-------------------------------------------------------
+I.c - For those who update from a previous version of PBLang (3.0 up to 4.1)
+-------------------------------------------------------
+
+1. Make a backup of all relevant data which sits in the db-directory and all
+its subdirectories. There is now a backup/restore program available, called
+backup.php and restore.php. To use it, create these directories:
+	db/backup
+	db/backup/posts
+	db/backup/cats
+	db/backup/members
+and give them 666 rights. Then run the backup program. This will save all
+your old data. Make sure to remove the restore.php program, otherwise anyone
+can execute it and create a horrible scenario on your system.
+2. Set the forum into maintenance mode, and make sure nobody is logged in.
+2a. Check the folders
+db/posts
+db/cats
+for any illegal files. Illegal files could be e.g.
+__1 (first numbers missing, should be e.g. 1_1_1)
+Don't try to fix them, these messages never appeared in the forum and are
+useless. Remove them from the folder. Files which belong there are index.html
+and .htaccess, so keep them there.
+3. Copy all updated files to the directory where your forum is located. Make
+sure that you also copy the updated files from subdirectories to their
+respective locations! There are a number of new images, updated language
+files etc.
+4. Run install.php and delete it afterwards (usually, it deletes itself after
+successful installation). You will need to add some information during
+installation process.
+5. Make the lang files in the directory templates/pb/language/ writeable, if
+you plan on changing them.
+6. If you are updating from version 3.x, run the update.php file. If you
+are updating from version 4.0 or 4.1, run the update-1.php file and then the
+update-2.php file. These two programs you must run also if you update from
+version 3.x. So, in a nutshell, the steps are as follows -
+* Update from version 3.x:
+	update.php
+	update-1.php
+	update-2.php
+*Update from version 4.0 and 4.1:
+	update-1.php
+	update-2.php
+7. Log in and check if members are listed properly in the memberlist. If so,
+delete update.php - it must not be accessible to anyone else but you.
+Then check if all messages appear intact. if so, remove update-1.php and
+update-2.php.
+If you find that the data hasn't been updated properly, please contact
+me through the support forum or via email. Do not attempt to run the
+update programs more than once! Do not allow users to access the forum,
+if the update didn't perform as expected.
+8.Go to the admin center and select the forum settings. Save it, even if you
+haven't done any changes. Now your version should be indicated as 4.5
+9. You should be done.
+See also the changes in filestructure (section I.e)!
+
+I.d - System Requirements
+----------------------------
+
+PBLang doesn't need much: it requires support for cookies, and it runs
+only on servers which support PHP. That's all. Javascript is used, but
+not required - it works also without.
+
+I.e - The following changes in file structure have taken place:
+--------------------------------------------------------
+
+Version 2.5 to version 3.0:
+templates/pb/admin.php is no longer needed
+templates/pb/usercp.php is no longer needed
+templates/pb/images/buttons is no longer needed
+All doc-files go into the docs-directory
+
+Higher than version 3.0:
+error.php is no longer needed
+viewcats.php is obsolete
+db/getdate.php is no longer needed
+db/menu.php is no longer needed (was never needed)
+templates/pb/header.php is no longer needed
+templates/pb/footer.php is no longer needed
+templates/pb/stats.php is no longer needed
+templates/pb/msg.php is no longer needed
+templates/pb/admintop.php is no longer needed
+templates/pb/ntopic.php is no longer needed
+templates/pb/editpost.php is no longer needed
+templates/pb/cat.php is no longer needed
+templates/pb/btop.php is no longer needed
+templates/pb/bpiece.php is no longer needed
+templates/pb/error.php is no longer needed
+templates/pb/forum.php is no longer needed
+templates/pb/memp.php is no longer needed
+templates/pb/login.php is no longer needed
+templates/pb/memtop.php is no longer needed
+templates/pb/sbot.php is no longer needed
+templates/pb/nreply.php is no longer needed
+templates/pb/pm.php is no longer needed
+templates/pb/pmp.php is no longer needed
+templates/pb/pmpshow.php is no longer needed
+templates/pb/postp.php is no longer needed
+templates/pb/posttop.php is no longer needed
+templates/pb/pmpshow.php is no longer needed
+templates/pb/profile.php is no longer needed
+templates/pb/regdone.php is no longer needed
+templates/pb/register.php is no longer needed
+templates/pb/rev.php is no longer needed
+templates/pb/revp.php is no longer needed
+templates/pb/search.php is no longer needed
+templates/pb/stop.php is no longer needed
+templates/pb/who.php is no longer needed
+templates/pb/sendpm.php is no longer needed
+templates/pb/ucp.php is no longer needed
+templates/pb/userin.php is no longer needed
+Attention:
+styles.php has been moved. It is no longer in the templates/pb-folder.
+You find it now in the db/settings/styles-folder, where you would expect it.
+
+Higher than version 4.1:
+admstyles.php has been newly created
+admsettings.php has been newly created
+(the following are all complete subfolders):
+templates/pb/images/arset is no longer used
+templates/pb/images/blackset is no longer used
+templates/pb/images/blueset is no longer used
+templates/pb/images/greenset is no longer used
+templates/pb/images/redset is no longer used
+templates/pb/images/butt/ar_grey is no longer used
+templates/pb/images/butt/bluesimple is no longer used
+templates/pb/images/butt/contrablue is no longer used
+templates/pb/images/butt/silver is no longer used
+templates/pb/images/butt/textonly is no longer used
+all subfolders in templates/pb/images/icon are no longer used
+templates/pb/images/top/ar_grey is no longer used
+templates/pb/images/top/XP is no longer used
+
+Higher than version 4.65:
+search is no longer needed
+
+I.f - Other Specialities
+------------------------
+
+When you install PBLang, you will notice a button in the top-right corner
+showing "Paypal - Donate". If you click this button, you will be taken to
+a page of Paypal, through which you can contribute financially to the
+further development of PBLang.
+You are not required to do so, but it would be a nice gesture to honour the
+hundreds of hours that have gone into developing this software and to
+encourage the ongoing development process. If you want to invite the
+members of your board to do so, too, just leave it. If you don't want to,
+empty the file "donation.php" completely. You could also enter a URL to
+your own image, however you need to use PHP-code. Do not delete this
+file, it would cause an errormessage. See the comments in this file as well.
+
+I.g - Language Installation
+--------------------------
+If the language of your country is not available in the package, you need to
+check if it is available for download at the website at
+http://PBLang.drmartinus.de/
+and install it yourself.
+However, installation is easy:
+Just copy the files in these packages to the directories in which they are
+already located in the archive, and you are done. The directories in the
+archives are subdirectories of the directory
+
+templates/pb/
+
+The contents of the images folder in the archive belongs therefore into
+
+templates/pb/images
+
+and so on. The new language will be available for selection from within
+the admin center and the user control panel, as well as from the
+install-program and registration program.
+
+==========================================
+II - How to use PBLang
+==========================================
+
+(this section isn't complete and will be filled as required)
+
+II.a - After installation
+-------------------
+
+After installation, you should immediately register yourself. The first
+member gets admin status automatically. Then go into the admin control
+panel, and set the forum according to your preferences. These things are
+most important:
+
+Enter a valid email-address for the admin (you), so you can be notified when
+a new user has been registered, and for other purposes.
+If - which is sometimes the case - your server doesn't support the PHP mail
+function, disable the checkbox "mail supported by server". This will
+make the useful function of email notification useless, which is a pity.
+Ask your ISP whether he can allow you to use the mail function for this
+purpose. Some ISPs turn it off because it's misused for mass mailing.
+
+After you have become admin, log in and start creating categories.
+A category is a supersection which contains the actual forums. The
+forums are the places where the discussions take place. So plan
+your board accordingly. Have a look at the support forum to know how
+a board is organized.
+Once you created the categories, create also forums whithin the categories.
+Once you have created the forums, people can begin to post messages.
+
+
+II.b - Maintenance Mode
+----------------------
+
+If you set the board into maintenance mode, because you are updating it,
+and log out, you won't be allowed to log in. A simple way to bypass this
+limitation is to run "login.php" instead of "index.php" when accessing the
+board. You can only use the board if you are the admin, while it is in
+maintenance mode.
+
+II.c - Deletion of posts
+-----------------------
+
+Basically, deletion means deletion. I.e. the message that is to be deleted,
+will be completely gone. So use this feature with care!
+
+While replies can be deleted at any position by the author or the admin
+and moderator, a post with replies cannot be deleted by its author, but
+only by the admin. This is because the author of a post that initiated
+responses should not be able to delete his or her message, otherwise, it
+would be difficult to find out to what the people actually replied. When
+the admin wants to delete this first message, (s)he must be aware that
+with this, the entire thread will be deleted. This is sometimes necessary.
+There is the equal function at the bottom of the thread. Since the deletion
+takes place physically, and counters will be reset, it may take some
+time, depending on how many replies are there.
+
+II.d - Guest Account
+------------------------
+
+If you want any user to be able to post without any identification, you
+can create a guest account and invite users to use this account. However,
+keep in mind that this is a way which allows all kinds of misuse -
+eventually you'll be held responsible for the contents of your website!
+
+II.e - Styles and Colors
+---------------------------
+
+PBLang supports multiple sets of colors and styles. But when you select a
+predefined set, your existing set will be overwritten. You can avoid that
+by copying the file "templates/pb/styles.php" to the directory
+db/settings/styles. There you rename it to something meaningful which
+reminds you of what it looks like, like "yellow_desert.php". Next time
+you call up predefined styles, this file will be on the list. Send me your
+styles.php file, So I can include it in the distribution package!
+
+With version 4.5, some improvement was made: Each style can have its
+own set of buttons. Buttonsets have a particular prefix which is set in
+the "styles and colors" section of the adminCP. You just enter this prefix
+into the field, and all the buttons appear in the selected design, provided
+they exist in the default language of your board. If they don't, default
+buttons will be selected. If you don't want that, you may have to choose
+English as the default language of your board. An example prescript is
+"ar_grey_", which is the style currently used in the support forums.
+
+II.f - Deletion of Forums and Categories
+---------------------------
+
+To delete a forum, you need to enter a forum as admin and then click on
+the link at the right bottom of the page "Delete forum". This will remove
+the entire forum, including all topics!
+So use this function with great care!
+To delete a category, you first must delete all forums in this category. If
+you had deleted forums before the release of the version "Phoenix", you'll
+have to rename the forums again in the admin center to give them another
+name than "delplz", so that they become visible again. Then you can delete
+them properly. After all forums are deleted, you select the option "delete
+category" in the admin center.
+
+=========================================
+III - The Admin Control Panel
+=========================================
+
+A - News and Version Comparison
+________________________
+
+Here you have the possibility to check if your version is the latest.
+This page links to two files on my server at http://www.drmartinus.de. Some
+hosts do not allow scripts to access other sites, in this case it is good
+not to open this page of the Admin center. In this case I strongly
+recommend that you subscribe yourself to the Announcement list, where new
+versions of PBLang are announced.
+If your host allows scripts to check other websites, you'll get latest info
+and a version comparison by selecting this page, making it easy for you to
+find out if a new version is available. There is also a link to the project
+page, from where you get directly to the support forum, if you need to get
+help.
+The version comparison has been improved to also take into account if
+you use a beta or testing version.
+
+B - Forum Settings
+_______________
+
+
+III.B.a - Announcement option
+--------------------------
+
+In PBLang Phoenix, the new option to make an announcement has been
+introduced. The announcement will be displayed in a box below the header
+and above the list of forums. It can be configured in the admin center.
+In the text box which contains the text for the announcement, you can use
+simple HTML. If the HTML tag contains quotes, use single quotes only,
+otherwise the text will be distorted. If you leave the box empty, no
+announcement box appears.
+
+III.B.b - Server supports Email by PHP
+----------------------------------
+
+Some webservers do not allow email by PHP. This is especially relevant
+when the server is based on Windows. In this case, to avoid errormessages,
+it is good to uncheck this option. You know that your server does not support
+EMail by PHP if you get an error message like "undefined function mail() ....".
+
+In order to bypass this problem, a function has been built into 4.55 which
+allows using a SMTP server. However, this function must be set manually:
+
+You must edit admsettings.php: the line (around No. 129) reading
+
+echo "<input type=\"hidden\" name=\"smtpmail\" value=\"0\">";
+
+must be changed to
+
+echo "<input type=\"hidden\" name=\"smtpmail\" value=\"1\">";
+
+Simultaneously you must (!) disable the email support via PHP. Also,
+edit the file db/settings/sendmail.php with your data. Note that your
+password must be entered in plain text, but the file sendmail.php can not
+be accessed by other users, so it should be safe.
+Go to the admin center and select forum settings, then save the settings,
+even if you didn't change anything. This will make sure that smtp-mail
+is enabled.
+Try it out, this function isn't official yet, let me know if it works.
+
+III.B.c - Automatic emails
+----------------------
+
+In the forum settings in the admin control center, there is an option to allow
+automatic emails. This refers to the email that is sent to new users at
+registration time and welcomes the user. This is overridden by the option
+"Server supports email by PHP", i.e. when the server does not support
+email by PHP and this option is turned off, it doesn't matter if automatic
+emails are enabled or not, it won't have an effect.
+
+III.B.d - Allowing Attachments
+----------------------
+
+Previously, attachments were either allowed or forbidden. Now, if you allow
+attachments to be uploaded, you have the possibility to select which file types
+should be allowed. This can be helpful if you handle certain filetypes which were
+not included by default.
+Keep in mind that all sorts of executeable files can cause great damage,
+particularly when they are executeable by the webserver, like html and php
+files, java programs etc. So you should not allow those. Files without an
+extension are generally allowed (as long as you allow attachments to be
+uploaded).
+
+III.C - Members
+____________
+
+III.C.e - Grant status
+-----------------------
+
+You can grant members a particular status. This status will not be affected
+by the amount of messages a member has posted. The statuses have the
+following privileges:
+
+admin - the member can do everything
+moderator - the moderator can edit and delete messages in a forum, and can
+	lock a topic. The moderator can not delete a topic or a forum, and may not
+	alter or delete an administrator's post
+friend - currently no special privilege
+
+===================================================
+IV - Tools
+===================================================
+
+IV.A - GetLatestMessage.php
+*****************************
+
+The file GetLatestMessage.php contains a function which is suitable to
+create a list of latest posts on another website. You'll have to first include
+the file in a PHP-file like
+
+include ('GetLatestMessage.php');
+
+Note: The file itself must be in the directory from where it is called!
+
+Then you can call the function GetLatestMessage() as follows:
+
+$LastMsg=GetLatestMessage(string URL,string path,int noofmessage);
+
+e.g.:
+
+$LastMsg=GetLatestMessage('www.myurl.de/forum','/home/htdocs/myacc/html/forum',0);
+
+$LastMsg will be an array containing the following values:
+
+$LastMsg[URL] -> The URL wihtout "http://"
+$LastMsg[subj] -> The subject line of the message
+$LastMsg[auth] -> The author's name
+
+A way to use these values would be:
+
+echo '<a href="http://'.$LastMsg[URL].'" TARGET="NEU">'.$LastMsg[subj].'</a>
+by '.$LastMsg[auth].';
+
+<int noofmessage> means: 0 is the newest, 1 the second, 2 the third and so on.
+
+If you want to create a list of more than one message, you need to check
+for duplicates, maybe like this:
+
+for ($i=1;$i<=10;$i++){
+$PrevMsg=$CurrentMsg;
+$CurrentMsg=GetLatestMessage('www.myurl.de/forum','/home/htdocs/myacc/html/forum',0);
+if ($PrevMsg!=$CurrentMsg){
+	[your code to display the message link comes here]
+}
+}
+
+
+
+===================================================
+V - Support Addresses
+===================================================
+
+Support is available at
+
+http://www.drmartinus.de/PBL/index.php
+
+For German users under http://www.drmartinus.de/forum/index.php
+
+at both locations this version of PBLang will be running.
+
+Check the page http://pblang.drmartinus.de/ frequently for updates.
+
+If you want to be informed about new releases of PBLang, subscribe yourself
+to the announcement list (which sends out messages only when a new release
+or an important update was made) by sending an email to
+ APBLang-subscribe@yahoogroups.com
+
+====================================
+V - The PBLang Team
+====================================
+
+Many have contributed. Not all may be listed here. This is not
+for any particularly reason. Some members wished not to be included,
+others didn't turn in their details, some names are within the code,
+and others I simply missed, for which I apologize.
+If anyone who contributed and isn't listed here, but would like to be,
+please let me know!!!
+
+
+Dr. Martin Senftleben - Coordinator and major programming work
+PBLang-Supportforum ID: DrMartinus
+PBLang@drmartinus.de
+http://www.drmartinus.de/
+
+Stoner - testing, some programming, graphics
+PBLang-Supportforum ID: stoner
+
+Aceman - some suggestions and mods
+
+Sergei Light - many bugfixes, suggestions and mods, support for Russian
+language
+PBLang-Supportforum ID: SLight
+
+Cyborg - Finnish translation (up to version 4)
+PBLang-Supportforum ID: cyborg
+
+
+Vitaly - Russian translation, beta testing, graphics
+PBLang-Supportforum ID: vox
+
+Vassilis - Greek and Rumanian translation
+PBLang-Supportforum ID: s2sinner
+Website: http://www.smartclub.gr/
+
+Jianqi Huang (J) - Simple Chinese translation, graphics (up to Version 4.0)
+PBLang-Supportforum ID: tintytinyme
+Website addresses:
+      http://www.vony.com
+      http://www.counterstrikeonline.com
+      College Student (SUNY Geneseo)
+
+Symbol - Spanish translation
+PBLang-Supportforum ID: symbol
+Website address: http://www.emulespana.com
+
+Lazarusek - Polish translations and buttons (up to version 4)
+PBLang-Supportforum ID: Lazarusek
+Website address: http://www.lazarusek.w.pl/forum
+
+Yetti - Polish translation and buttons from version 4.5 onwards
+PBLang-Supportforum ID: Yetti
+Email: Yetti@z.pl
+
+
+Yeechai - Traditional Chinese translation
+PBLang-Supportforum ID: yeechai
+Yeechai also does the simple Chines translation
+from version 4.5 onwards
+
+Juraj Hal?ák - Slovak translation
+PBLang Supportforum ID:
+
+Banditos - Latvian translation
+PBLang Supportforum ID:
+
+Nathanaël Lécaudé - French translation
+PBLang Supportforum ID: natcl (alias: Helter)
+Website address:
+     http://www.studioimaginaire.com
+
+Zodiac - programming, graphics
+PBLang Supportforum ID: ZoDIaC
+
+mucho - programming (mods), webpage design
+PBLang Supportforum ID: mucho
+
+Daedalus - support, programming
+PBLang Supportforum ID: Daedalus
+
+Pokkis - support, programming
+PBLang Supportforum ID: pokkis
+
+and many more who helped in translating and testing the software...
+
+Martin Senftleben
+

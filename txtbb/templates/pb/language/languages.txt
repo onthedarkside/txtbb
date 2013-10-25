@@ -1,0 +1,28 @@
+ar: Arabic
+cz:Czech
+da: Danish
+de: German
+el: Greek
+en: English
+es: Spanish
+fi: Finnish
+fr: French
+he: Hebrew
+it: Italian
+lv: Latvian
+nl: Dutch
+no: Norwegian
+pl: Polish
+ro: Rumanian
+ru: Russian
+si: Slovenian
+sk: Slovak
+sr: Serbin Cyrillic characters
+sr-cyr: Serbin Cyrillic characters
+sr-lat: Serbian Latin characters
+sv: Swedish
+tr: Turkish
+ua: Ukrainian
+vi: Vietnamese
+zh: Chinese
+zh-tw: traditional Chinese

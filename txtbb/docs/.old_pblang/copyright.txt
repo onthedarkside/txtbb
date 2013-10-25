@@ -1,0 +1,29 @@
+PBLang - the international Bulletin Board system based on PHP
+
+The original source is from powerboards (2000-2002), 
+which was then modified by the MPHH-project (2002)
+This code was since modified, repaired, extended by 
+
+Martin Senftleben alias Dr. Martinus
+
+Copyright (c) 2002-2003 by the PBLang-Team
+
+Support: http://www.drmartinus.de/PBL/index.php
+Source from: http://www.drmartinus.de/software/index.htm
+
+No ownership is assumed to any of the artwork, images, sprite 
+rips, etc. featured on this page unless othwerwise stated. If 
+something belongs to you and you want credit, or want it 
+removed, feel free to contact the WebMaster via e-mail.
+
+--------------------------------------------------------
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.published under the GPL

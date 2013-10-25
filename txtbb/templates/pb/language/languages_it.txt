@@ -1,0 +1,24 @@
+ar: Arabo
+cz: Cecho
+da: Danese
+de: Tedesco
+el: Greco
+en: Inglese
+es: Spagnolo
+fi: Finlandese
+fr: Francese
+it: Italiano
+lv: Lituano
+nl: Olandese
+no: Norvegese
+pl: Polacco
+ro: Rumeno
+ru: Russo
+sk: Slovaco
+sr: Serbo
+sv: Svedese
+tr: Turco
+ua: Ucraino
+vi: Vietnamese
+zh: Cinese
+zh-tw: Cinese tradizionale

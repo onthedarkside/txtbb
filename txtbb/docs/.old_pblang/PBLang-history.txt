@@ -1,0 +1,482 @@
+PBLang - Version 4.6 - update history
+
+If you are planning to update from a previous version of PBLang, i.e. a
+version lesser than 4.5, you have to read the PBLang-doc.txt and follow
+the update instructions very carefully! Otherwise, you might destroy the
+data that so far has been posted in your forum!
+
+release date:
+
+A lot of work has gone into this release, and much I have to thank the help of
+others, which are now called the PBLang-Team, since the number is growing... :-)
+
+***********************************************************
+>>New In Version 3.0:
+--------------------
+1 - users can be deleted by the admin
+2 - E-Mail- and PM-information is only available to logged in members. Others can
+only view some general details and the chat-IDs
+3 - Installation has been further improved and takes care of many situations
+4 - User levels have been extended to 8.
+5 - When replying, previous posts will be shown. How many, can be set in the admin
+center
+6 - Security was strengthened
+7 - PM area has been vastly improved
+8 - maintenance mode has been solved a bit more elegantly
+
+***********************************************************
+>>New in Version Phoenix (4.0):
+------------------------------
+1 - posts are ordered by last updated threads - the one with the most recent reply
+     comes to the top
+2 - there are now indicators which show threads and categories which aren't read
+     yet
+3 - real deletion of forums - delete also removes topics in the forum completely
+4 - extended membership functions: indicator of last visit and last post in the
+     members' list
+5 - registration allows now setting of an avatar right at registration time, and real
+     name and the use of an alias, as well as deciding whether Email shall be hidden
+     or not
+6 - real deletion of categories - however only if there are no forums within this
+     category any more
+7 - Members can have aliases
+8 - passwords are being encrypted
+9 - an announcement text can be easily integrated
+10 - animated smilies have been added
+11 - confirmation of registration can be requested via email
+12 - member names can now not be longer than 30 characters and shorter than
+     4 characters
+13 - forums can be set with limited access - only selected members may enter
+14 - users can choose the language for the interface
+15 - it's easier to add a new language (no source editing any more)
+16 - (invisible): member data has been consolidated to use only one file per
+     member
+17 - extended statistics functions
+18 - admin can request notification for each new topic or for each new post
+     in the forum
+19 - installation procedure improved
+20 - admin can delete members from the memberslist
+21 - guest counter added
+22 - attachment file types are limited to txt, jpg, gif, tif, zip and rar
+
+-------------------------
+Fixed bugs (among many) version 4.0:
+-------------------------
+
+1. HTML-coding improved or rectified
+2. After writing a pm, the software returned to the "new pm" screen instead
+     of the pm-list
+3 - admin center returns now after action to the respective section in which the
+     changes were done (this wasn't really a bug, but now it's more comfortable)
+4 - Handling of quotes in subject lines has been fixed
+5 - removing a member while that member is logged in caused problems - now a
+     member cannot be removed as long as (s)he is logged in.
+
+***********************************************************
+New in version 4.5:
+-----------------------
+
+1 - File system changed: now, infos on categories are stored in one file for
+     each category
+2 - File system changed: infos on forums are stored in one file for each forum.
+     This helps increasing speed and reducing space usage (PBLang used
+     10 files until now - a legacy probem).
+3 - File system changed: posts are now stored completely in one file each.
+     It's a similar issue like all other changes so far.
+4 - increased security - avoiding javascript code injection
+5 - The latest posts can be listed - admin decides how many
+6 - Search function improved (particularly speed)
+7 - Admin determins the size of an external avatar, which will be the maximum
+     size for every avatar picture
+8 - sticky messages - messages that always stay on top - only admin can create
+     them, of course
+9 - sorting of member list is now possible. Sorting according to each info
+     that is available on the list - name, joined date, email etc., ascending and
+     descending
+10 - the maximum number of replies to a topic shown per page can be set
+     by the admin. This takes care of issues where servers or links are slow.
+11 - included "pdf" in the list of uploadable files (attachments)
+12 - login process does no longer pass the encrypted password in the URL
+13 - A member can now change his alias back to a value he used earlier. The
+	alias will still be blocked for other users. This functions works only with aliases
+	used after the application of this update, because there is no way to determine
+	which alias has been used by which person
+14 - HTML code can no longer be used to format the posts, instead, HTML and
+	other code is made visible. This way, the board fits better for discussions about
+	scripting and programming, and avoids destruction of the layout by wrong HTML
+	code
+15 - member can decide not to display other users avatars, to save bandwidth
+16 - included a function to make sure that the program was updated properly
+17 - Improved the list of latest visitors to show the last logged in visitor on top
+	of the list
+18 - included navigation links in the posts display, to be able to navigate easily
+	in longer threads with multiple pages
+19 - attachment file types can now be set by the admin (see doc)
+20 - There will be no "No Subject" messages any more. If a message has
+	no subject, the subject line will be made of the first words of the message
+
+-------------------------
+Fixed bugs in version 4.5:
+-------------------------
+
+1 - it seems that when a reply was edited, the last post date wasn't adjusted accordingly.
+     This has been fixed now.
+2 - on the entry page, last post's author and date wasn't updated when an entry
+     was edited.
+3 - When unbanning a user, his/her details were completely deleted and username
+     was set to the admin's name. This fix has been published as version 4.1
+4 - When login and confirmation of registration were required, the confirmation wouldn't
+     work. This has been fixed
+5 - alias is now used more consistently
+6 - When post.php was called without parameters, it returned some ugly PHP-errors. This
+     has been fixed.
+7 - users who use a proxy will now also be able to log in without problems and while
+     the IP-check is on (not tested, since I don't use a proxy)
+8 - In a locked forum, the button at the bottom still allowed to create a new
+     topic and caused a sometimes cryptic error message
+9 - Files are now locked when written to to avoid confusion and faulty messages
+10 - notification messages about replies are now in the language of the person who
+	receives them
+11 - PBLang tended to loose messages with increasing complexity. This problem
+	was most likely caused by a mising lock to the files, when someone wrote a
+	new post, a reply and so on. Now, a file is locked when it is written to and checked
+	for any anomalities, so that no data should be lost any more.
+12 - email to admin about new members will now be in the language of the board, and not in
+	the new member's language
+13 - animated smilies were not shown when replying to a message, even though the
+	author of the reply had animated smilies enabled
+14 - When the board is in maintenance mode, it shows now the correct message and
+	does not say that the admin requires the visitor to log in.
+15 - Membership list sorting by names was separated into lower and upper case words.
+	That has been fixed.
+16 - attachment link wasn't right.
+
+******************************************************
+New in version 4.51
+-----------------------
+
+1 - the use of PHP Accelerator on a server can cause problems with the way
+	how PBLang writes to files - vertain variables weren't stored properly.
+	The writing process was improved so that this kind of problem can't occur
+	any more. This is not a bug in PBLang, but in PHP Accelerator.
+
+-----------------------
+Fixed bugs in version 4.51 and 4.52:
+-----------------------
+
+1 - The avatar picture wasn't shown when selected during registration
+2 - two minor bugs in the install.php file have been fixed
+3 - Finally solved the problem that quotes weren't working in the footer, so
+	couldn't be included easily. This works now, also for the site title and
+	motto.
+
+******************************************************
+	New in version 4.55
+-----------------------
+
+1 - HTML code design improved, more consistent use of styles
+2 - Now the admin will see the real username of a member, in case the alias
+	is different. The real username is shown in posts from that member
+	underneath the alias.
+3 - Search results now translate BB-codes
+4 - When smilies or BBCodes aren't enabled, they won't show when a new
+	topic or reply is created.
+5 - provided a tool to make a list on a different page of latest posts.
+6 - support for SMTP email, if PHP-email is not supported (see doc for more
+	details)
+
+******************************************************
+	New in 4.58
+-----------------------
+
+1 - Now, [url=htpp://...]name of webpage[/url] is possible
+2 - Now, [email=email@server.com]name of email owner[/email] is possible
+
+----------------------
+Fixed bugs in version 4.58
+----------------------
+
+1 - lanuage used for smileys and PBcode images wasn't set to member's
+	language
+2 - box for email notification appeared also when editing a message or
+	reply, but wasn't really useful. It referred only to the original author's
+	settings. This is now fixed - every responder can request notification and
+	will be notified of posts, and this notification can also again be turned
+	off by editing a post.
+3 - Posting a message with neither a subject nor any content causes
+	several PHP errors and wrong counter increments. Now, a PBLang error
+	message will be shown.
+4 - member could enter double quotes in user slogan, which would result
+	in PHP errors. Such characters are now taken care of.
+5 - It was possible to insert javascript code into the image BB-code. This
+	is now no longer possible.
+6 - If post.php was called with parameters which call for a non existing
+	message, several PHP errors occured. Now, you'll see a clear error
+	message produced by PBLang.
+
+******************************************************
+New in 4.59
+-----------------------
+
+1 - category and forum titles and descriptions can now contain BB-codes
+
+-----------------------
+Fixed bugs in version 4.59
+----------------------
+
+1 - No avatars were shown when only webavatars were disabled. Fixed.
+2 - Even when web avatars weren't allowed, new members could choose it
+	when registering. Fixed.
+3 - Undoing email notification didn't work. It works now.
+4 - When the alias was different from the username, it caused an "alias
+	already in use" error, even though the alias wasn't used. Fixed.
+5 - When a new forum was created and the first message was a sticky one,
+	errors occured and one "new post" button didn't work
+6 - Corrected a bug in GetLatestMessage.php which would cause it to produce
+	errors when a recent message was deleted in the forum.
+
+******************************************************
+New in 4.6
+-----------------------
+
+1 - moderators may now also delete individual posts
+2 - added a style called ar_grey_1 which uses the basic set of ar_grey,
+	but takes into account some contrast problems (light text on dark
+	background and vice versa)
+3 - Modified "GetLatestMessage.php". The function will now return an
+	array with information about a specified number of latest posts (as
+	stored in the latestposts list). The call to this function is now slightly
+	different from what it used to be:
+	GetLatestMessage(str URL_to_forum,str basedir,int amount_of_messages_to_show)
+4 - GetLatestMessage() now returns an array item to tell how many messages
+	are actually available for display. This way there is no problem when too
+	many messages were written in restricted forums. Check the file itself for
+	details on how to use it.
+
+-----------------------
+Fixed bugs in version 4.6
+----------------------
+
+1 - PBCodes in the user slogan weren't translated. That is done now.
+2 - Footer wasn't displayed right in the admin center (first call).
+3 - URL BBCode wouldn't accept URLs beginning with https://
+4 - fixed some interface inconsistencies
+5 - PBCode img can now be nested within a URL-PBCode, so the image
+	becomes a link to some URL.
+6 - When confirmation of registration wasn't required, members could re-use
+	the name of a deleted user.
+7 - GetLatestMessage.php had various problems in 4.59
+8 - When a user is banned, in profile it still showed the rank image as if
+	he isn't banned.
+9 - Fixed some problem with the notification email sent to admins - the
+	mail was incomplete when notified about a reply in the forum
+10 - within a thread, the bottom navigation wouldn't work properly.
+11 - when messages were deleted which were in the latest messages list,
+	the list grew smaller. This is fixed.
+12 - messages which had been posted in a closed restricted forum
+	were invisible in the latest messages list to members who don't have
+	access to this forum saw accordingly less messages in the latest messages
+	list. This has been fixed.
+13 - The function GetLatestMessage() returned any message, also the ones
+	from restricted forums. This won't happen any longer.
+14 - The deletion of messages sometimes produced wrong info about
+	latest posts and authors of latest posts. This should be fixed now.
+15 - Censoring of bad words didn't work properly. This is now fixed.
+16 - If an empty search form was submitted, it returned  numerous warnings.
+	This has been fixed now.
+17 - modifications to avoid PHP error messages when a wrong URL is entered
+
+******************************************************
+New in 4.601
+-----------------------
+
+1 - When deleting a forum and when when deleting a category, the screen
+	will return to the respective input mask for further deletions in the
+	admin center
+
+-----------------------
+Fixed bugs in version 4.601
+----------------------
+
+1 - There was no bottom navigation on post.php in 4.6 if picturebuttons
+	were turned off.
+
+******************************************************
+New in 4.61
+-----------------------
+
+1 - When an attachment cannot be added, the list of allowed attachments
+	is shown in the error message
+2 - In the user control panel (visible only to the admin and the member),
+	the real username is visible
+3 - You can now add another sender's name which will be used as sender
+	of an email from the board (like "PBLang admin" or so)
+4 - when deleting a post within a thread, PBLang now returns to the thread
+	and when the thread is completely deleted, it returns to the forum from
+	which the thread was deleted
+
+-----------------------
+Fixed bugs in version 4.61
+----------------------
+
+1 - When a thread span over several pages, quoting didn't work when
+	part of a reply from the first page should be quoted.
+2 - When posts had been deleted within a thread, the page count didn't
+	work properly any more.
+3 - No notification was sent to admin about a new topic if it was requested
+	in the admin center
+
+******************************************************
+
+-----------------------
+Fixed bugs in version 4.62
+----------------------
+
+1 - fixed a security flaw in ucp.php which allowed a user to change another
+	user's data
+
+******************************************************
+
+-----------------------
+Fixed bugs in version 4.63
+----------------------
+
+1 - fixed a security flaw which allowed to change to disguise itself by
+	manipulating cookies
+2 - fixed a problem while deleting a category that casued the admin center
+	to enter into a loop
+
+******************************************************
+
+-----------------------
+New in version 4.64
+----------------------
+
+1 - as a security measure, when changing a user's data, the current
+	password must be entered in the appropriate field.
+
+-----------------------
+Fixed bugs in version 4.64
+----------------------
+
+1 - fixed a security flaw in the PM functions.
+
+******************************************************
+
+-----------------------
+New in version 4.65
+----------------------
+
+1 - There is now an option in board settings which makes it easier if the
+	board is located in frames. It doesn't open a new window if a form is
+	completed, but the window is opened in the frame in which the board is
+	started.
+
+-----------------------
+Fixed bugs in version 4.65
+----------------------
+
+1 - whenever a form was used, the completed form appeared in a new window
+
+******************************************************
+
+-----------------------
+New in version 4.66
+----------------------
+
+1 - when replying on a multi-page thread, after submitting the reply
+	the correct page should be shown
+2 - words which need to be censored can be set in the admin center (d)
+3 - some code improvements (g)
+4 - changed the system variables to a safer set of variables (m)
+5 - attachments can now have extensions with less or more than
+	3 characters (y)
+6 - modified function CheckLoginStatus() in functions.php (x-1)
+7 - limited length of input in registration form in order to avoid mischievous
+	behaviour (z-1)
+
+-----------------------
+Fixed bugs in version 4.66
+----------------------
+
+1 - logout.php now kills the PBLSecID-cookie as well
+2 - the censoring function is now case-insensitive
+3 - fixed a bug which allowed certain users to access a forum with
+	restricted access even though they didn't have permission
+4 - fixed a minor bug with deleted users (e)
+5 - search made parts of a URL bold when the search string was found
+	within a URL. This has been fixed.
+6 - now nested PBcodes are possible (f)
+7 - fixed a problem in the sendmail() function (h)
+8 - fixed a problem when quoting a message; either an error occured
+	or the wrong message was included for quotation (i)
+9 - fixed a bug in function getauthorinf() in ffunctions.php (j)
+10 - fixed a security hole - code injection in register.php (k)
+11 - No display of personal text in messages (l)
+12 - When deleting a forum, PBLang ended up in a loop (n)
+13 - fixed security hole where code injection could take place in ucp.php (o)
+14 - fixed security holes pointed out by Hackerlounge Research Group (p)
+15 - added a function to disable PHP error warnings in order to avoid
+	hackers to find relevant server information (test mode in admin center)
+	(q)
+16 - removed some potential security risks from editpost.php (r)
+17 - improved security in sendpm.php (s)
+18 - fixed a security issue with delpm: any logged in member could delete
+	other members' private messages (t)
+19 - avatar via URL wasn't shown, instead the homepage url was taken (u)
+20 - fixed the function CheckLoginStatus (v)
+21 - fixed two security problems (code injection using the alias field in
+	ucp.php and creating a user "\" with admin rights) (w)
+22 - fixed some minor code problems (w-1)
+23 - fixed a bug in sendpm.php (y-1)
+24 - admin doesn't need to enter the old password if he gives a member a
+	new password (y-2)
+25 - fixed an error which caused PBLang not to accept any uploads
+26 - fixed a problem where colors of memberlevels were not displayed
+	properly (z)
+
+===========================================
+From now on NEW way of version numbering:
+n1.n2.n3.l1
+n1=main version number (here: 4)
+n2=subversion number (here: 67)
+n3=bug fixes (from 1 to infinite)
+l1=new features within this subversion (from a to zz)
+
+I know, this is not the official way of maintaining versions, but It's my
+way, that should be enough reason to do it :-)
+============================================
+-----------------------
+New in version 4.67
+----------------------
+1 - changed version numbering (4.67.0.a)
+-----------------------
+Fixed bugs in version 4.67
+----------------------
+1 - fixed a security problem in register.php (4.67.1.a)
+2 - fixed the problem that the YAHOO-info was not updated in ucp (4.67.2.a)
+3 - fixed a security problem in the pm section (4.67.3.a)
+4 - fixed bugs in the sendpm.php file (4.67.4.a)
+5 - fixed call to wrong function setaliascolor() (4.67.5.a)
+6 - fixed the bug that didn't make the first user admin (4.67.6.a)
+7 - fixed bugs in register.php (4.67.7.a)
+8 - fixed: style of user name in post.php wasn't shown properly (4.67.8.a)
+9 - fixed a bug that didn't allow attachments in a new post (4.67.9.a)
+10 - fixed a bug in install.php (4.67.10.a)
+11 - fixed bugs in register.php (4.67.11.a)
+12 - fixed more bugs in register.php - sorry (4.67.12.a)
+13 - fixed a problem that deleted an entry after editing when using
+	Opera or Firefox (4.67.13.a)
+14 - improved code in login.php to avoid hacking attempts (4.67.14.a)
+15 - fixed a security hole in lang.nl (4.67.14.b)
+16 - fixed an exploit that allowed users to register as admin using a
+	perl-skript (4.67.14.c)
+17 - fixed a bug that didn't allow users to register (4.67.15.a)
+18 - fixed some more problems in register.php (4.67.16.a)
+
+
+******************************************************
+
+Martin Senftleben
+developer of PBLang
+

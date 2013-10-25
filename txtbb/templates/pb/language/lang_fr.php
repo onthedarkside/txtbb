@@ -1,0 +1,715 @@
+<?php
+/*****************************************************************************
+   	Language file for PBLang 4.5 - (c) 2003 - Martin Senftleben
+	PBLang done by
+   by Martin Senftleben - E-Mail: PBLang@drmartinus.de
+   http://www.drmartinus.de/
+   my forum is at http://www.drmartinus.de/forum/index.php
+   Support for PBLang you get at http://www.drmartinus.de/PBL/index.php
+
+   *****************************************************************************
+	Translator's details:
+   This translation's language: French
+   The author of this translation: Nathanaël Lécaudé
+   Webpage of translator: http://www.studioimaginaire.com
+   Forum of translator (in her or his language): http://www.studioimaginaire.com/PBLang/
+
+**********************************************************************************/
+
+$NoSuchForum="Forum inexistant !";
+$ViewForum="Accéder au forum";
+$NoTopics="Il n'y a pas de discussions dans ce forum !";
+$DeleteForum="Supprimer le forum";
+$VLockForum="Barrer le forum";
+$VUnlockForum="Débarrer le forum";
+$OpenTopic20="Une discussion active avec plus de 20 messages";
+$OpenTopic="Une discusion active";
+$LockedTopic="Une discussion barrée";
+$PMAlreadyDeleted="Ce MP a déjà été supprimé !";
+$DeletePostNotAllowed="Vous ne pouvez pas supprimer ce message, ce n'est pas le vôtre !";
+$NoEditInLockedForum="Vous ne pouvez pas modifier un forum barré";
+$EditPost="Modifier le message";
+$VError="Erreur";
+$ContactAdmin="Contactez l'administrateur à";
+$VHelp="Aide";
+$VExplanation="Explication";
+$VExplanationPoint="point d'exclamation";
+$VHelpIMG="Ceci sert à afficher des images dans vos messages ou signatures";
+$VDisplays="Displays";
+$VHelpURL="Ceci sert à affichier des hyperliens dans vos messages ou signatures";
+$VUsage="Utilisation";
+$VHelpEMAIL="Ceci sert à ajouter des liens mailto: à vos messages ou signatures";
+$VHelpGLOW="Ceci rajoute du texte néon à vos messages ou signatures. Remplacez COULEUR avec une couleur de votre choix (bleu,vert,rouge,jaune)";
+$GlowText="Texte Néon";
+$VHelpITALICS="Ceci sert à écire votre texte en italique dans vos messages et signatures";
+$ItalicText="Texte Italique";
+$VHelpBold="Ceci sert à écire votre texte en gras dans vos messages et signatures";
+$BoldText="Texte Gras";
+$VIndex="Index";
+$WhoIsThere="Qui est connecté ?";
+$AlreadyLoggedIn="Vous êtes déjà connecté";
+$RegistrationRequired="L'administrateur du forum exige que tous les lecteurs se connectent ou <a href=\"register.php\">s'enregistrent</a> pour accéder au forum";
+$NonExistingUser="L'utilisateur n'existe pas";
+$UsernameRequired="Vous devez entrer un nom d'utilisateur";
+$PasswordRequired="Vous devez entrer un mot de passe";
+$PasswordLost="Mot de passe perdu";
+$PasswordSent="Votre mot de passe a été envoyé à votre adresse de courriel";
+$MemberList="Liste des membres";
+$PostReply="Répondre";
+$NoReplyInLockedForum="Vous ne pouvez pas répondre dans un forum barré";
+$NoReplyInLockedTopic="Vous ne pouvez pas répondre dans une discussion barrée";
+$UploadsNotAllowed="L'envoi de fichiers n'est pas autorisé ! Le message a été envoyé";
+$PostWait="Attendez s'il vous plaît, nous vous redirigeons vers votre message";
+$NoNewTopicInLockedForum="Vous ne pouvez pas créer de nouvelles discussions dans un forum barré";
+$LangLocale="fr_FR";
+$PrivateMessaging="Messagerie privée";
+$NoMessages="Pas de messages dans la boîte de réception";
+$ViewPost="Voir message";
+$VFunctions="Fonctions";
+$DeleteTopic="Supprimer la discussion";
+$LockTopic="Barrer la discussion";
+$UnlockTopic="Débarrer la discussion";
+$AlreadyMember="Vous êtes déjà membre";
+$NoNewUsers="L'administrateur du forum n'accepte pas de nouveaux membres";
+$VRegister="Enregistrement'";
+$PleaseComplete="S'il vous plaît compléter tous les champs obligatoires du formulaire";
+$WelcomeMessage="Bienvenue sur le forum de";
+$WelcomeMessage1="";        //"'s forums";
+$ThanksMessage="Merci de vous être enregistré(e)";
+$UsernameTaken="Ce nom d'utilisateur est déjà pris !";
+$VSearch="Chercher";
+$NoResults="Pas de résultats trouvés";
+$SendPM="Envoyer MP";
+$AuthorRequired="le champ auteur est requis";
+$MessageSent="Votre message privé a été envoyé";
+$InvalidUsername="Nom d'utilisateur non valide";
+$NoSuchUser="Bel essai, mais cet utilisateur n'existe pas !";
+$InvalidPassword="Mot de passe incorrect";
+$VUserCP="Congif. Utilisateur";
+$ProfileUpdated=" - Ce profil a été mis à jour";
+$Updated="Mis à  jour";
+$VMembers="membres";
+$VMembers1="membre";
+$VMembers24="membres";
+$VMembers59="membres";
+$VAdministrator="Administrateur";
+$VAdminPC="Paneau de configuration de l'administrateur";
+$VModerator="Modérateur";
+$VUser="Utilisateur";
+$AccessDenied="Accès refusé";
+$AdminCenter="Coin de l'administateur";
+$PbNews="Nouvelles de PBLang";
+$VWhatIsThe="Qu'est-ce que le/la";
+$AdminCenterExplain="Ceci est l'endoit ou l'administrateur peux modifier les paramètres, les langues et maintenir le forum";
+$VVersionCompare="Comparer la version";
+$CompareString="Plus récente/Vôtre";
+$LatestRelease="Vous avez la dernière version !";
+$NewerRelease="Il y a une nouvelle version !";
+$VForumSettings="Configuration du forum";
+$VTitle="Titre";
+$VTemplate="Modèle";
+$VSiteMotto="SiteMotto";
+$VFooter="Pied de page";
+$VSubmit="Envoyer";
+$VReset="Rétablir";
+$VStylesColors="Styles/Couleurs";
+$VBackground="Fond";
+$VBody="Corps";
+$VAlternatingColor1="Autre couleur 1";
+$VAlternatingColor2="Autre couleur 2";
+$VHeaderColor="Couleur de l'en-tête";
+$VHeaderBG="Fond de l'en-tête";
+$VSubheaderColor="Couleur sous l'en-tête";
+$VSubheaderBG="Fond sous l'en-tête";
+$VExtraBorderColor="Couleur supplémentaire de bordure";
+$VExtraBorderWidth="Largeur supplémentaire de bordure";
+$VStandardBorderColor="Couleur de cadre standard";
+$VBorderColor="Couleur de bordure";
+$VLinkColor="Couleur de lien";
+$VVisitedLinkColor="Couleur de lien visité";
+$VHoverLinkColor="Couleur de lien par dessus";
+$AdminOptionsExplain="Ces options sont un petit exemple de ce que les modèles Powerboards peuvent faire, essayer la section modèles pour modifier tous, jusqu'au tableaux HTML.";
+$VDone="fait";
+$VTemplate="Modèle";
+$ChooseTemplate="Choisissez un modèle à modifier, vous pouvez modifier tous jusqu'au tableaux HTML";
+$VMenu="Menu";
+$VView="Vu";
+$VMain="Principal";
+$VSettings="Paramètres";
+$VTemplates="Modèles";
+$VMemberGroups="Groupes de membres";
+$VBanMembers="Bannir membres";
+$VBanMember="Bannir membre";
+$VEmailMembers="Écrire aux membres";
+$VGrantStatus="Donner un statut";
+$VCategories="Catégories";
+$VForum="Forum";
+$VForums="Forums";
+$VAddForums="Ajouter forums";
+$VEditForums="Modifier forums";
+$VEditForum="Modifier forum";
+$VPrevPage="Page précédente";
+$VNextPage="Page suivante";
+$VPage="Page";
+$VOf="de";
+$VSubject="Sujet";
+$VAuthor="Auteur";
+$VReplies="Réponses";
+$VLastReply="Dernière réponse";
+$VViews="Vu";
+$VOptions="Options";
+$VUsername="Nom d'utilisateur";
+$SubjectIcon="Sujet &amp; Icône d'envoi";
+$VSmiley="Sourire";
+$VShocked="Choqué";
+$VHuh="Hen ?";
+$VTongue="Langue";
+$VWink="Clin d'oeil";
+$VEvil="Méchant";
+$VEmbarassed="Mal à l'aise";
+$VGoofy="Stupide";
+$VRollEyes="Beaux yeux";
+$VHyperlink="Hyperlien";
+$VImage="Image";
+$VEmail="Courriel";
+$VGlow="Néon";
+$VBold="Gras";
+$VItalicize="Italique";
+$VContent="Contenu";
+$VAttachment="Pièces jointes";
+$NoAttachments="Les pièces jointes ne sont pas permises pour le moment";
+$VSubmitForm="Envoyer le formulaire";
+$VHello="Bonjour";
+$VYouHave="vous avez";
+$VMessages="message";
+$VMessages1="message";
+$VMessages24="messages";
+$VMessages59="messages";
+$VPlease="S'il vous plaît";
+$VLogin="connectez vous";
+$VLogout="déconnectez vous";
+$VRegister="Enregistrement'";
+$VHome="Accueil";
+$VSearch="Chercher";
+$VHelp="Aide";
+$VPM="Messages privés";
+$AdminPC="Config. Admin.";
+$VTopics="Discussions";
+$VTopics1="Discussion";
+$VTopics24="Discussions";
+$VTopics59="Discussions";
+$VLastPost="Dernier message";
+$TimeDate="Date et heure en ce moment :";
+$VPassword="Mot de passe";
+$RetrievePassword="Obtenir votre mot de passe";
+$VPosts="Messages";
+$VPosts1="Message";
+$VPosts24="Messages";
+$VPosts59="Messages";
+$VPosition="Statut";
+$VPost="Message";
+$VDeletePost="Supprimer votre message";
+$VNewTopic="Nouvelle discussion";
+$VStandard="Standard";
+$VThumbsUp="Les pouces en l'air";
+$VThumbsDown="Les pouces en bas";
+$VExplanationPoint="Point d'explication";
+$VQuestionMark="Point d'interrogation";
+$VAngry="Frustré";
+$VMad="Fâché";
+$VSad="Triste";
+$VSendPM="Envoyer MP";
+$VReply="Répondre";
+$VDelete="Supprimer";
+$VStatus="Statut";
+$VProfileFor="Profil pour";
+$VModify="Modifier";
+$VAvatar="Avatar";
+$NoAvatars="Les avatars ne sont pas permis en ce moment";
+$VEnableAvatars="Activer avatars";
+$VLocation="Situation géographique";
+$VWebsite="Site web";
+$VSignature="Signature";
+$VRegistrationComplete="Enregistrement' complet";
+$ThanksForSigning="Merci de vous être enregistré(e)";
+$VHere="ici";
+$NoNewUsers="Nous n'acceptons pas d'autres membres en ce moment";
+$VProfile="Profil";
+$VNumber="Numéro";
+$VRequired="Requis";
+$VTopicReview="Vérifier la discussion";
+$VSearchTerms="Rechercher les termes";
+$VSearchResults="Résultats de recherche";
+$VSendMessage="Envoyer le message";
+$VInbox="Boîte de réception";
+$VMessage="Message";
+$VStats="Stats";
+$VLatestMember="Le membre le plus récent est";
+$VTheSearchTerm="Le terme de recherche";
+$VFoundResults="a trouvé les résultats suivants";
+$VUserControlPanel="Panneau de configuration de l'utilisateur";
+$VUserControlCenter="Coin de l'utilisateur";
+$VPersonal="Personnel";
+$VNewPassword="Nouveau mot de passe";
+$VPersonalText="Texte personnel";
+$VList="Liste";
+$PBCodeAllowed="Pcode et émotions acceptés";
+$VPasswordAgain="Mot de passe encore";
+$VWhoIsOnline="Qui est connecté ?";
+$VLoggedIn="connecté";        //"logged in";
+$VLoggedOn="connecté";        //"logged on";
+$VLoggedOff="déconnecté";        //"logged off";
+$VOr="ou";
+$NoAccess="Vous n'avez pas accès à cet espace, si vous croyez que oui, cliquez sur rafraîchir";
+$VDisableAttachments="Désactiver les pièces jointes";
+$VEnableHTML="Activer le HTML";
+$VCensorWords="Censurer les mots vilains";
+$VEnableBBCode="Acitver le code BB";
+$VEnableSmilies="Activer les émotions";
+$VAllowNewUsers="Accepter de nouveaux membres";
+$VMaintenanceMode="Mode de réparation";
+$VOnlyAdmins="Seulement les administrateurs ont le droit d'accéder";
+$RequireLogin="Oblige les utilisateurs à être connectés";
+$VToViewForum="pour voir les messages";
+$VMaintReason="Raison de réparation";
+$VBannedReason="Raison de bannissement ";
+$AdminEmail="Courriel de l'administrateur";
+$AdminEmailReason="le courriel sera visible sur les pages d'erreurs pour le signalement d'erreurs.";
+$VComplete="Complet";
+$VTemplateEditor="Éditeur de modèles";
+$VInfinity="Infini";
+$VBanned="Banni";
+$VCategory="Catégorie";
+$VAddCategory="Ajouter une catégorie";
+$VEditCategories="Modifier les catégories";
+$VEditCategory="Modifer la catégorie";
+$ExplainAddCategory="Remplissez ce formulaire pour ajouter une catégorie";
+$VName="Nom";
+$VDesc="Description";
+$VVia="Via";
+$VPrivateMessage="Message privé";
+$VWhichStatus="Quel statut";
+$VBan="Bannir";
+$VUnban="Débannir";
+$VNever="Jamais";
+//$AdministrativeFunctions="";        //"administrative functions";  - not needed any more
+$VOn="le";
+$VBy="par";
+$VSent="Envoyé";
+$NoPermission="Vous n'êtes pas autorisé à faire cette action !";
+$VLocked="Discussion barrée, pas de réponse possible";
+
+// status 19 Sept 2002
+$VHideEmail="Masquer votre courriel des autres utilisateurs";
+$VHidden="Caché";
+$Charset="iso-8859-1";
+// status 21 Sept 2002
+$VNewMember="Nouveau membre";
+$VWith="avec";
+$VAllowEmail="Activer courriels";
+$VThereIs="il y a";
+$VThereAre="il y a";
+$VEdited="Modifié";
+$VEditMembergroups="Modifer les groupes de membres";
+//status 22 Sept 2002
+$VAnd="&amp;";
+$SetRequireLogin="Exiger que les membres soient connectés";
+$VTo="À";
+$VSmilies="Émotions";
+$VPBCode="PBCode";
+$CVLogin="Connexion";
+//status 23 Sept 2002
+$VPosted="Envoyé";
+$PBLSupportLink="Support pour PBLang";
+$VReplySent="Vous avez reçu une réponse";
+$NotifyReplySent="Bonjour,\n\n    Une réponse a été envoyée pour votre message ".$sitetitle." ayant comme sujet ";
+$VNotifyByEmail="Voulez vous être averti(e) si on envoit une réponse à votre message ?";
+$EmailNotification="Notification par courriel";
+$VAdministrativeFunctions="Fonctions administratives";
+$VURLAvatar="Avatar via URL";
+//status 27 Sept. 2002
+$ForumLocked="Ce groupe est barré";
+$WrongUsername="Le nom d'utilisateur peut contenir seulement des lettres ou des chiffres";
+$WrongEmailAddress="Ceci n'est pas une adresse de courriel valide";
+//status 2 Oct 2002
+$VFrom="de";
+$VNoTemplatesEdit="Vous ne devez pas modifier un modèle en utilisant cette interface, utlisez un éditeur approprié pour modifier les fichiers sources";
+//status 3. Oct. 2002
+$VFont="Police";
+$VFontColor="Couleur de la police";
+$VFontsize="Taille de la  police";
+//Following are datevariables which need to be filled in with so called placeholders, since time changes every time a page is called up. Fill in the appropriate string
+//for your language!
+/***************************************
+usage of placeholders in datevariables:
+%a= shortened name of weekday in local language
+%A= full name of weekday in local language
+%b= shortened name of month
+%B= full name of month
+%c= date and time in a format matching the format of the local language (if you don't know what to fill in, use this one)
+%C= century
+%d= day of month (00 to 31)
+%D= shows "m/d/y", i.e. "06/23/02" (see example below)
+%e= day of month as number, 0 to 31
+%h= like %b
+%H= hour in 24-hour format (00 to 24)
+%I hour in 12-hour format (01 to 12)
+%j= day of year (ßß1 to 366)
+%m= month as decimal (01 to 12)
+%M= minute as decimal (00 to 60)
+%n= new line
+%p= "am" or "pm", depending on time of the day and on the local language
+%r= time in am- or pm formatting
+%R= time in 24-hour format
+%S= seconds as decimals
+%t= tabulator
+%T= actual time, represents %H%M%S
+%u= day of week as decimal (1= Monday)
+%U= number of week as decimal; Sunday is the first day of the week
+%V= Calendarweek. Week begins Monday, first week is the week with at least 4 days in the new year
+%w= weekday as decimal, Sunday is 0
+%W= number of the week, first Monday in the year is the first day of the first week
+%x= preferred date depending on set language
+%X= preferred time depending on set language
+%y= year as two-number-digit
+%Y= year as four-number-digit
+%Z= timezone
+%%= the %-sign
+***************************************/
+$DateFormat1="%D";
+$DateFormat2="%A, %e %B %Y, %R";
+$VLessThan="Moins de";
+$VLanguageEdit="Modifier le fichier de langue";
+//status 4. Oct. 2002
+$VRemoveMembers="Supprimer membres";
+$VRemove="Supprimer";
+$VMemberRemoved="Ce membre a été supprimé";
+
+/*imagelinks - you can use them almost completely. Just
+change the filenames to the names of your language. You
+should use the format name_ln.gif, where "ln" is the language code for your country. Example: profile.gif becomes
+profile_de.gif if the button has been changed to German
+*/
+$Vpicturebuttons="Utiliser les boutons";                    //"Use Buttons";
+$profilealt="Profil";                    //"Profile";
+$profiletitle="Profil";                    //"Profile";
+$Vprofil="Profil";                    //"Profile";
+$emailalt="Envoyer courriel";                    //"Send email";
+$emailtitle="Envoyer courriel";                    //"Send email";
+$Vemail="Envoyer courriel";                    //"Send email";
+$editalt="Modifier message";                    //"Edit Post";
+$edittitle="Modifier message";                    //"Edit Post";
+$Vedit="Modifier message";                    //"Edit Post";
+$sendpmalt="Envoyer MP";                    //"Send PM";
+$sendpmtitle="Envoyer MP";                    //"Send PM";
+$Vsendpm="Envoyer MP";                    //"Send PM";
+$yimalt="Envoyer YIM";                    //"Send YIM";
+$yimtitle="Envoyer YIM";                    //"Send YIM";
+$Vyim="Envoyer YIM";                    //"Send YIM";
+$aimalt="Envoyer AIM";                    //"Send AIM";
+$aimtitle="Envoyer AIM";                    //"Send AIM";
+$Vaim="Envoyer AIM";                    //"Send AIM";
+$msnalt="Envoyer MSN";                    //"Send MSN";
+$msntitle="Envoyer MSN";                    //"Send MSN";
+$Vmsn="Envoyer MSN";                    //"Send MSN";
+$icqalt="Envoyer ICQ";                    //"Send ICQ";
+$icqtitle="Envoyer ICQ";                    //"Send ICQ";
+$Vicq="Envoyer ICQ";                    //"Send ICQ";
+$wwwalt="Site Web";                    //"Website";
+$wwwtitle="Site Web";                    //"Website";
+$Vwww="Site Web";                    //"Website";
+//Posts
+$newthreadalt="Nouveau message";                    //"New Post";
+$newthreadtitle="Nouveau message";                    //"New Post";
+$Vnewthread=$newthreadtitle;
+$replyalt="Répondre";                    //"Post Reply";
+$replytitle="Répondre";                    //"Post Reply";
+$lockedalt="Barré";                    //"locked";
+$lockedtitle="Barré";                    //"locked";
+//header images
+$homealt="Accueil";                    //"Home";
+$hometitle="Accueil";                    //"Home";
+$searchalt="Chercher";                    //"Search";
+$searchtitle="Chercher";                    //"Search";
+$helpalt="Aide";                    //"Help";
+$helptitle="Aide";                    //"Help";
+$logoutalt="Déconnexion";                    //"Log out";
+$logouttitle="Déconnexion";                    //"Log out";
+$ucpalt="Config. Utilisateur";                    //"UserCP";
+$ucptitle="Config. Utilisateur";                    //"UserCP";
+$pmalt="MP";                    //"PM";
+$pmtitle="MP";                    //"PM";
+$loginalt="Connexion";                    //"Log in";
+$logintitle="Connexion";                    //"Log in";
+$registeralt="Enregistrement'";                    //"Register";
+$registertitle="Enregistrement'";                    //"Register";
+$adminalt="Config. Admin.";                    //"AdminCP";
+$admintitle="Config. Admin.";                    //"AdminCP";
+$memberslistalt="Membres";                    //"Members";
+$memberslisttitle="Membres";                    //"Members";
+$VPreviousMessages="Messages précédents";
+$VTextColor="couleur du texte";
+$VMoreThan="Plus que";
+$NoSuchFile="Ce fichier n'existe pas";
+$VRE="RE";
+$PWNoMatch="Le mot de passe est invalide, essayez de nouveau";
+$VDefault="Défaut";
+$VStars="Étoiles";
+$VFlames="Flammes";
+$VRankImages="Images de rang";
+$VMaxPostsReply="Montrer un certain nombre de messages en répondant";
+$VEditPost="Modifier le message";
+$VReplied="Répondu";
+$VNew="Nouveau";
+$VOriginalPM="MP original";
+$VRead="Lire";
+$VNoSubject="Pas de sujet";
+$VOrderOfReplies="Ordre des réponses";
+$VFirstReplyFirst="Première réponse en premier";
+$VFirstReplyLast="Première réponse en dernier";
+$VStyleHeaderFont="Style de police";
+$VStyleHeaderPage="Fond de la page";
+$VStyleHeaderTitle="En-tête du forum";
+$VStyleHeaderMenu="Menu d'en-tête du forum";
+$VStyleHeaderDate="Date";
+$VStyleHeaderContainer="Contenant de formulaire";
+$VStyleHeaderHeader="En-tête";
+$VStyleHeaderSubheader="Sous en-tête";
+$VStyleHeaderMenu="Menu";
+$VStyleHeaderForumButton="Bouton(s) de forum";
+$VStyleHeaderUserColors="Couleurs de l'utilisateur";
+$VStyleHeaderLinkColors="Couleurs du lien";
+
+$VBackground="Fond";
+$VForm="Fond intérieur";
+$VFormBorder="Bordure du fond intérieur";
+$VFormBorderSize="Taille de la bordure du fond intérieur";
+$VForumHeaderBorder="Couleur de la bordure d'en-tête";
+$VForumHeaderBorderSize="Taille de la bordure d'en-tête";
+$VForumHeader="Couleur de l'en-tête";
+$VForumHeaderTitle="Couleur du titre de l'en-tête";
+$VForumHeaderTitleSize="Taille de la police du titre de l'en-tête";
+$VForumHeaderCaption="Couleur de la police du sous-titre de l'en-tête";
+$VForumHeaderWelcome="Couleur de la police de l'en-tête de bienvenue";
+$VForumHeaderMenu="Couleur du menu de l'en-tête";
+$VForumHeaderMenuFont="Couleur de la police du menu d'en-tête";
+$VDateColor="Police de la date";
+$VContainerBorder="Couleur de la bordure du contenant";
+$VContainerBorderSize="Taille de la bordure du contenant";
+$VContainerInner="Couleur du contenant";
+$VHeaderColor="Couleur de l'en-tête";
+$VHeaderGif="Image d'en-tête";
+$VHeaderFont="Couleur de la police de l'en-tête";
+$VSubheaderColor="Couleur de la sous en-tête";
+$VSubheaderGif="Image de la sous en-tête";
+$VSubheaderFont="Couleur de la police de la sous en-tête";
+$VMenuColor="Couleur du menu";
+$VFMenuColor="Couleux fixée du menu";
+$VMenuFont="Couleur fixée de la police du menu";
+$VForumButtonColor="Couleur de bouton du forum";
+$VForumButtonOver="Couleur du bouton de forum par dessus";
+$VForumButtonTopics="Couleurs des discussions du forum";
+$VForumButtonReplies="Couleurs des réponses du forum";
+$VForumButtonLast="Couleur du dernier message du forum";
+$VAdminColor="Couleur de la police de l'administrateur";
+$VModColor="Couleur de la police du modérateur";
+$VUserColor="Couleur de la police de l'utilisateur";
+$VServerTimezone="Fuseau horaire du serveur";
+$VLocalTimezone="Temps local";
+$VExplainTimezone="Si le fuseau horaire est incorrect, corrigez là en choisissant le bon nombre";
+$VTimeZone="Fuseau horaire";
+$VBurningFlames="Flammes brûlantes";
+/*The following 3 variables allow a better output in the stats-line. Ending 1 is the singular form for the beginning of the sentence like
+"There is currently 1 members". Ending 24 und 59 are the plural forms for the beginning of the sentence like "There are currently 7 members".
+If you had the variables $VCurrentMember and $VCurrentmembers in older lang-files, you can remove them now - they are no longer used.
+*/
+$VCurrentMembers1="Il y a actuellement";
+$VCurrentMembers24="Il y a actuellement";
+$VCurrentMembers59="Il y a actuellement";
+$VEMSupport="Le serveur supporte le courriel via PHP";
+$VNoEMSupport="Désolé, ce serveur ne supporte pas le courriel via PHP";
+$VDefaultSlogan="Slogan par défaut";
+$VExplainSlogan="le solgan est le texte sous l'avatar";
+$VPredefStyles="Styles prédéfinis";
+$VNotWriteable="Désolé, nous n'avons pas pu écrire le fichier";
+$VRemoveStatus="Statut régulier";
+$VOfTheseNew="De ces nouveaux";
+$VMaxAtchSize="taille maximale de la pièce jointe en octets (0=infini)";
+$VFileTooBig="Désolé, ce fichier est trop volumineux, il y a une limite de taille pour les pièces jointes, pointez à l'aide d'une lien vers un serveur si possible";
+$VCookieError="Ce forum requiert que les cookie soient activés, le forum pourrait fonctionner mal avec votre fureteur";
+$VNotice="Avis";
+$VUsernameGiven="Le nom d'utilisateur est déjà pris";
+$VUsernameLimits="^[a-zA-Z0-9]+$";       /*this is to check the username for invalid characters (important where Windows is the server) -
+                                                            leave the string as it is for ordinary names in Latin characters, otherwise check the ereg-rules.
+                                                            If you leave it empty, it will not check the username for valid characters.*/
+$VDate="Date";
+$VLanguagechoice="de=German, el=Greek, en=English, fr=French, es=Spanish, fi=Finnish, ro=Rumanian, ru=Russian, se=Serbian, zh=Chinese";
+$VLanguageSelection="langue";
+$VRepeatPassword="Répétez le mot de passe";
+$qqalt="QQ";
+$qqtitle="QQ";
+$VStyleButtonChoice="Sélection de bouton";
+$VButtonLimits="Ce choix a un effet seulelement si vous n'utilisez pas des boutons de langues spécifiques";
+$VIn="dans";
+$VRealname="Nom";
+$VAlias="Surnom";
+$VExplainAlias="Votre nom d'utlisateur ne change pas mais vous pouvez changer votre surnom en tout temps, celui qui apparaîtra dans les forums";
+$VSlogan="Slogan";
+$VStyleHeaderMemgroupColors="Couleurs des groupes de membres";
+$VDateJoined="Membre depuis le";
+$VLastVisit="Dernière viste";
+$VLastPost="Dernier message";
+$VGroupColors="Acitiver les couleurs de groupe";
+$VGroupcolorsExplain="Ceci activera des couleurs différentes pour chaque groupe de membre dans les statistiques";
+$VIPLogged="Ip enregistré";
+$VSiteLogo="URL du logo de site";
+$VSiteLogoExplain="Votre image doit être dans le dossier templates/pb/images-folder. Il est suffisant d'écire le nom du fichier dans la boîte";
+$VMaxPPP="Montrer tel nombre de message par page";
+$VRequestConfirmation="Demande de confirmation ou d'enregistrement par courriel";
+$VPleaseConfirm="Confirmer votre enregistrement en allant sur la page suivante :";
+$VNoAvatar="Pas d'avatar";
+/*Following variable: Do not change the part &quot;$VURLAvatar&quot;, it will be translated automatically
+with the words that you have put into the variable $VURLAvatar
+This variable was in use earlier but has changed, so please remove it from the upper region of the file, if you are updating
+an existing language file*/
+$AvatarURLtip="(Conseil : Vous devez choisir &quot;$VURLAvatar&quot; de la liste ci-haut pour utiliser cette fonction)";
+$VDeleteCat="Supprimer la catéorie";
+$VConfirmation="Confirmation d'enregistrement";
+$VWrongConfirmationCode="Le code de confirmation est incorrect";
+$VConfirmationError="Il y a eu une erreur durant la confirmation";
+$VNoCatDelete="Vous ne pouvez pas supprimer de catégories contenant encore un forum";
+$VStyleAnnouncementFont="Styles dans les boîtes d'annoncement";
+$Vgladg="Sourire joyeux";
+$Vgrinsg="Sourire brillant";
+$Vbadg="Mauvaise passe";
+$Vschluckg="oups";
+$Vsunglg="Pas content";
+$Vteardrop="Larme";
+$Vsurprised="Surpris";
+$Vsleeping="Dort";
+$Vthmbup="pouces en l'air";
+$Vthmbdn="pouces en bas";
+$Vpfeilrg="Flèche vers la droite";
+$Vbulb="Idée";
+$VHelpg="À l'aide !";
+$Vbounceg="rebondissant";
+$Vdanceg="dansant";
+$Vredface2g="gêné";
+$Vdevilg="diable";
+$Vrespektg="respectueux";
+$Vschimpfg="gronde";
+$Vwallbashg="frappe les murs";
+$Vofftopicg="Hors sujet";
+$VEnableAnimSmilies="Utlisez les émotions animées (temps de chargement plus long lorsqu'on édite les messages";
+$VAllowAlias="Autoriser les surnoms";
+$VChangeAlias="Autoriser le changement de surnom après";
+$VDays="jours";        //"days";
+$ChangeAliasNotAllowed="Vous ne pouvez pas changer votre surnom maintenant, essayez plus tard";
+$AliasAlreadyInUse="Ce surnom est déjà utilisé";
+$VAllowAccess="Autorise ce membre à accéder au forum";
+$VAll="tous";
+$VModerators="modérateurs";
+$VFriend="Amis";
+$VExplainFriend="Un ami est un membre qui ne peux pas avoir accès à certains forums, il/elle ne pourra pas modifier les discussions comme peut le faire le modérateur";
+$VExpectConformationMail="Vous allez recevoir un courriel contenant un lien de confirmation de l'enregistrement, une fois avoir confirmé vous pourrez accéder au forum";
+$VWelcomeMessage="Message pour souhaiter la bienvenue à un membre par courriel";
+$VCheckIP="Sécurité aditionnelle : désirez vous vérifier l'adresse IP de l'ordinateur en visite ?";
+$VSitelogoWidth="Largeur en pixels du logo du site";
+$VSitelogoHeight="Hauteur en pixels du logo du site";
+$VAnnounce="Message spécial sur la page d'accueil";
+$VToday="Aujourd'hui";
+$VVisits1="visite";
+$VVisits24="visites";
+$VVisits59="visites";
+$VTotalVisits="Visites en tout";
+$VLastVisitors="Derniers visiteurs";
+$VUsernameTooLong="Nom d'utilisateur trop long, 25 caractères au maximum";
+$VAllowEmail="Activer les courriels automatiques";
+$VNotifyAdmin="Avertir l'Admin de nouveaux messages (discussions seulement)";
+$VNotifyAdminReplies="Avertir l'Admin de nouveaux messages";
+$VNewReply="Nouvelle réponse";
+$VAlreadyUpdated="Vous avez déjà mis à jour, rien à faire";
+$VFolderIconChoice="Icône du dossier est";
+$ficonalt="Icône de dossier";
+$VForbiddenType="Format de fichier interdit, vous pouvez seulement envoyer des images (gif, jpg, tif) des fichiers textes (txt) et des archives (zip, rar)";
+$VUserIsOnline="Ces utilisateur est actuellement connecté et ne peut être supprimé";
+$VQuotaExceeded="Il n'y a plus assez d'espace pour ajouter ce fichier";
+$VMinimumSpace="Minimum d'espace devant rester libre sur le serveur (en octects)";
+$VGuestVisits="Visites d'invités";
+$VTotalGuests="Tous les invités";
+$VAllVisits="Toutes les visites";
+$VRules="Conditions d'utilisation";
+$DateFormat3="%D, %X";
+$VGuests1="invité";
+$VGuests24="invités";
+$VGuests59="invités";
+$PasswordMessage="Vous devez demander à l'administrateur de vous donner un nouveau  mot de passe";
+$VUnknown="inconnu";
+$VRemoved="supprimé";
+$VMaxAvatarWidth="Largeur maximale en pixels de l'image de l'avatar";
+$VMaxAvatarHeight="Hauteur maximale en pixels de l'image de l'avatar";
+$VAcceptRules="J'accepte les règlements ci-haut";
+$VRulesMustBeAccepted="Vous devez accepter les règlements, cocher la case appropriée";
+$VMaxLastPosts="Nombre maximal de messages à afficher";
+$VLatestPosts="Messages les plus récents";
+$Vreplies1="répondre";
+$Vreplies24="réponses";
+$Vreplies59="réponses";
+$quotetitle="citation";
+$quotealt="citation";
+$VGenerell="generell";
+$VStickyMessage="Rendre le message prioritaire";
+$VStickyMessageExplain="Un message prioritaire est affiché au haut du forum, on l'utilise pour les avertissements importants";
+$VMaxRPP='Nombre maximal de réponses par page';
+$VBoardwidth="Largeur du forum (un nombre sous 101 représente un pourcentage, au delà de 300 représente une largeur en pixels";
+$VBackgroundimage="nom de l'image de fond (dans templates/pb/images)";
+
+//status 10 April 2003
+$VEnableWebAvatars='Activer les avatars web (venant d`un autre site)';
+//status 16 April 2003
+$VAlign='Aligner';
+$VLeft='gauche';
+$VCenter='centre';
+$VRight='droite';
+//status 19 April 2003
+$VAllowReplyInLockedForum='Permettre au membres de répondre même si le forum est barré';
+$VExplainLockedForum='Seuls les administrateurs et modérateurs peuvent poster de nouveaux messages dans ce forum';
+//status 10 May 2003
+$VBoardidentity='Paramètres d`identité du forum';
+$VBoardappearance='Style du forum';
+$VBoardsettings='Paramètres généraux du forum';
+$VNotificationsettings='Paremètres d`alertes';
+$VAliassettings='Paramètres d`alias';
+$VAvatarsettings='Paramètres d`avatar';
+$VPostsettings='Paramètres des messages';
+$VMembershipsettings='Paramètres d`enregistrement';
+$VQuoteBorder='Largeur de bordure des citations';
+$VQuote='citation';
+//status 12 May 2003
+$VDisableAvatars='Ne pas afficher d`avatars (si vous avez une connection lente)';
+$VIncompleteUpdate='Ce forum n`a pas été mis à jour correctement, lire Pblang-doc.txt pour plus d`informations';
+//status 14 May 2003
+$VNoNews='Il n`y a pas de nouvelles disponibles pour le moment';
+$TestRelease='Vous testez actuellement une nouvelles version, merci de votre aide et n`hésitez pas à me contacter si il y a un problème';
+$StillBeta='Vous utilisez une version test, la version finale est disponible, veuillez s`il vous plaît la télécharger.';
+//15 May 2003
+$VReplyallowed='Vous pouvez répondre dans ce forum mais pas poster de nouveaux messages.';
+$OpenTopic20read='Une discussion contenant plus de 20 messages - lu';
+$OpenTopicread='Une discussion active - lu';
+$LockedTopicread='Une discussion barrée - lu';
+$StickyMessage='Un message prioritaire';
+$StickyMessageread='Un message prioritaire - lu';
+$VTextareawidth='largeur du champ d`entrée';
+$VExplainTextareawidth='Si le forum est dans un site comportant des cadres, le champ d`acquisition de texte peut être trop large pour l`espace disponible lorsqu`un message est envoyé ou qu`on y répond.  Si cette valeur est diminué, les champs seront de taille correcte';
+//17 May 2003
+$VStylePrefix='Style de préfixe';
+$VExplainStylePrefix='Le style de préfixe détermine quels boutons et images sont utilisés pour ce thème, s.v.p. lire le fichier styles.txt';
+$VRestrictedForum='Forum restreint, vous pouvez répondre mais pas poster de nouveaux messages.';
+//22 May 2003
+$VAttachmenttypes="Permettre à ces types de fichier d'être attachés";
+//13 Aug 2003
+$VNoValidMessage='Une erreur s&#39;est produite lors de la sauvegarde de votre message. Le sujet et le contenu ont été perdu. S&#39;il vous plaît réécrivez votre message.';
+//21 Aug 2003
+$VWrote='écrire';
+
+?>

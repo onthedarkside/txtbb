@@ -1,0 +1,11 @@
+<?php
+
+$range1=50;
+$range2=100;
+$range3=250;
+$range4=500;
+$range5=1000;
+$range6=1500;
+$range7=2000;
+
+?>

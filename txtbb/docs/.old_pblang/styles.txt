@@ -1,0 +1,50 @@
+PBLang 4.5
+(c) 2003 - Martin Senftleben
+
+if you are into doing graphics and stuff, you are most welcome to try out making a new style for PBLang. Good examples are "flatland" and "ar_grey". Since I got these two really good examples, I have decided to settle on a method of integrating such styles with their own icons and buttons. The method is as follows:
+In the styles.php file which you create is a variable called $stylepref, which is the part that preceeds the images and buttons that belong to that particular style. This is relevant for all buttons which are placed in the templates/pb/images/top and the templates/pb/images/butt folders. So, if the style is called "ar_grey" and its $stylepref accordingly is "ar_grey_", a home-button which by default is called home.gif and matches that style, should be called ar_grey_home.gif
+When you select that style, the corresponding buttons are selected as well by PBLang. 
+Buttons which go into the templates/pb/images-folder should be preceded with that prefix, too. Links to some of them will be set in the styles.php file, but others are set by PBLang, and then the $stylepref is consulted again.
+
+I will also create some default styles which contain the other button types that are available.
+Now, which buttons and images would be involved in making a set of images matching your style?
+There are the ficons, which are used for forums. There are currently the following ones:
+ficon_newest - for the list of latest messages
+ficon_n - indicating that there are new messages in the forum
+ficon_read - indicating that all messages in the forum have been read
+ficon_accessdenied - indicating that there is no access to this forum
+ficon2 - indicating an unread message
+ficon2_read - indicating a read message
+ficon2_sticky - indicating a sticky unread message
+ficon2_sticky_read - a sticky read message
+ficon3/ficon3_read - a locked unread/read message
+ficon4/ficon4_read - an unread/read message in a thread with more than 20 posts
+ip_off - link to check the IP-address and indicating that the user is offline
+ip_on - link to check the IP-address and indicating that the user is online
+last - link to the latest message in a forum
+mem - image for the member control center
+online - image for the user's online area
+stats - image for the statistics area
+
+in subfolder icon:
+1 - just a message icon
+2 - thumbs up
+3 - thumbs down
+4 - important message (with an exclamation mark)
+5 - question (question mark)
+6 - happy smiley
+7 - angry smiley
+
+in subfolder code:
+
+There are the images for accessing pbcodes to include links etc. into a message.
+
+in subfolder ranks:
+
+ranks 1 to 5 and 10 to 12 are actually filling a row of 8 rank indicators, so rank12 has 8 filled rank indicators, rank1 has only 1 filled rank indicator - the other rank indicators are empty.
+rank12 is used for admins and friends as well (I should consider changing this)
+
+All images are gif files.
+
+Have fun! If you need assistance, let me know!
+

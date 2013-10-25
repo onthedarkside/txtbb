@@ -1,0 +1,18 @@
+Important hints for an update:
+
+1 - There is a new function in the admin center (board settings) to specify
+	the target of forms. So, if the board is within a frame, the target should
+	be named accordingly. Note that this function existed already, but just as
+	a "yes/no" option (whether in frames or not). Now you must enter a target
+	name. If there are no frames, "_self" will be fine.
+2 - if you used the censoring function, you can now define the words to
+	be censored manually from within the admin center. You should do that,
+	since otherwise the list will be empty.
+3 - You need to check in the admin settings the target for framesets. If
+	you don't use framesets, the field should contain "_self" (without quotes),
+	otherwise it should contain the name of the frame in which PBLang  is
+	positioned (This was already available sonce 4.65a)
+
+Notes for translators:
+1 - There are a few variables which have been rephrased. Please check.
+	They are dated 20 Oct 2004 or later

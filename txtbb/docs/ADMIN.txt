@@ -1,0 +1,100 @@
+
+Using txtBB is pretty straightforward: Sign up for a webhosting (you
+only need PHP support, most offer that). Upload the files in the txtBB
+folder in a folder you want to access your forum at. Do a few clicks 
+for configuration. 
+
+INSTALL
+=======
+
+1. Choose where you want to access the forum files (all the files and 
+folders in the folder txtBB). Upload them to your home directory
+(usually "public_html", sometimes just what you reach after login in
+via FTP) if all your site is the forum, or make a subdirectory (for 
+example "forum" or "txtbb" and upload them there). If your page was 
+http://mypage.com, and the folder for txtBB was forum, the adress of your
+forum would be http://mypage.com/forum/
+
+2. Do file permissions via FTP. All files, in directories or not, as well
+as the directory your forum is in ("forum" in our example) need to have
+permission 766 (or 777 if this fails). 
+
+3. Answer the installation questions. If the adress of your forum is
+http://mypage.com/forum/, the address of the installation page is 
+http://mypage.com/forum/install.php. Install PHP is deleted automatically
+after finishing the install (just answer all the questions). If it is
+still present on your server, delete it, as anyone could screw the 
+installation with this. Keep a local copy of it if you ever need to restore
+your forum from a backup.
+
+4. The first user who registers is admin! So register as soon as possible
+before some troll/ cracker/ spammer does. To do so, just visit your
+forum page and register as any normal user would do. Some hosters display
+PHP warnings, don't care if the install works and you can sign up (be sure
+all the permissions are correct). After correct installation and setting
+all the permissions to 766/ 777, you should no longer receive warnings.
+
+5. Go to the admin control panel and configure the settings. 
+
+BACKUP
+======
+
+Backing up your forum is very easy: Just download the forum folder via
+FTP. Some FTP clients will even allow you to synchronize two directory
+so you won't have a bunch of backups on your computer but one folder you
+keep up to date every few days or such.
+
+If you loose the forum on your website, just make a new forum folder, 
+copy install.php in your backup, delete global.php (contains old 
+settings) upload all the files and run install.php
+once again (after giving the permissions, i.e. 766 or 777 again, as they
+are most likely lost). Go to your forum page and login with your 
+old admin account. Should still work. That's about it.
+
+USER PROXY SETTINGS
+===================
+
+In the admin settings panel, you can force users to use a proxy, allow
+certain IP adresses or forbid weak, security compromising proxies (even
+if you do not enforce proxy usage). 
+
+If you run a page where some of your users might get in trouble if their
+identitity is revealed, you might choose to force them to use a proxy, 
+i.e. hide their real IP address.
+At the moment, the Tor network (free to use, https://torproject.org) is
+the most promising approach to anonymity. Tor isn't perfect, but pretty
+good - so Tor IP's are automatically allowed if you enforce proxy usage.
+Users might just download the Tor browser or install Tor (works on Android
+and IPhone even) to browse your website.
+
+Then there are weak proxies. These usually are proxy websites. They 
+allow students to watch Youtube in their school library where Youtube
+is blocked, but they don't offer actual anonymity and tend to log 
+traffic and cooperate with officials. This often is much, much worse 
+than no proxy at all. Plus, they often simply stop working without 
+users noticing.
+Even if you do not enforce proxy usage, think of disallowing them! Most
+likely not all are caught (sorry about that), but a lot of them.
+
+If you enforce a proxy, some users might complain about not being able
+to access the forum despite using a proxy. This is the case for VPN
+connections: VPN providers give users their IP address. On your redirect
+page, there should be for example your mail adress of a simple contact
+form, where users can tell you their VPN's IP. Research if you trust
+the provider in the context of your forum. If so, go to your backup,
+and open the file vpn_allow.txt in the folder "vpnallow" in a text editor
+(such as Notepad on Windows, or the [free to use] editors Notepad++ or
+Geany). Enter the IP of the VPN (sometimes there are several IPs) and 
+close the file again. Each line should only contain ONE IP adress. Upload
+the file to your server, i.e. overwrite the current vpn_allow.txt.
+This step involves manual editing because you should think well about
+which VPN you should trust. 
+
+The page you redirect users who have been blocked to might include:
+a) Info about what kind of proxy they should use. "No weak proxy/ proxy
+website", Tor or such.
+b) (If you don't get spammed) a mailadress, or contact form, so users
+can tell your their VPN provider so you can set the IP(s) on the list 
+in vpn_allow.txt
+c) A tutorial how to use an allowed proxy (most likely Tor) if you 
+enforce proxy usage.
